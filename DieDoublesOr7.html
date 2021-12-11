@@ -1,0 +1,58 @@
+<!Doctype html>
+<html>
+
+<head>
+<title> Double dice with reset button </title>
+
+<script type="text/javascript">
+function DC(y){
+	x=Math.floor(6*Math.random()+1);
+	PIC='dices/die'+x+'.gif';
+	document.getElementById('d'+y).src=PIC;
+}
+
+function CD(){
+	x=document.getElementById('d1').src;
+	val1=parseFloat(x.charAt(x.length-5));
+	y=document.getElementById('d2').src;
+	val2=parseFloat(y.charAt(y.length-5));
+	if(val1==val2){
+		document.getElementById('NB').innerHTML=
+		parseFloat(document.getElementById('NB').innerHTML)+1;
+	} else if((val1+val2)==7) {
+		document.getElementById('NS').innerHTML=
+		parseFloat(document.getElementById('NS').innerHTML)+1;
+	}
+	document.getElementById('NR').innerHTML=
+	parseFloat(document.getElementById('NR').innerHTML)+1;
+}
+
+</script>
+</head>
+
+<body>
+<div style="text-align:center"> 
+
+<p>
+<img id="d1" alt="die image" src="dices/die1.gif">
+<img id="d2" alt="die image" src="dices/die1.gif">
+</p>
+<input type="hidden" id="C1" value=0><input type="hidden" id="C2" value=0>
+<input type="button" value="Click to Roll" 
+	onclick="DC(1);DC(2); CD();">
+<hr>
+
+<p>
+Number of rolls: <span id="NR">0</span>
+<br>
+Number of doubles: <span id="NB">0</span>
+<br>
+Number of sevens: <span id="NS">0</span>
+</p>
+<input type="button" value="Reset counter"
+	onclick="document.getElementById('NR').innerHTML='0';
+		document.getElementById('NB').innerHTML='0';
+		document.getElementById('NS').innerHTML='0';">
+</div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>Final</title>
+<script type="text/javascript">
+function SI(){
+	x=(x+1)%2;
+	if(x!=1){
+		document.getElementById('QUI').src='Immagini/pirate1.png';
+	}else{
+		document.getElementById('QUI').src='Immagini/pirate2.png';
+	}
+}
+</script>
+
+
+
+</head>
+
+<body>
+
+<div style="text-align:center"><img id="QUI" width="128" height="128"
+	src="Immagini/pirate1.png"
+	onmouseover="this.src='Immagini/pirate2.png';"
+	onmouseout="this.src='Immagini/pirate1.png';"></img>
+</div>
+
+<h2>Land Lubber's Pirate Translator</h2>
+<p>Simply click on the buttons to translate
+words and/or phrases from English to pirate talk.
+</p>
+<table>
+	<tr><td>Greetings: </td>
+
+<td>
+<input type="button" value="Hello" 
+	onclick="document.getElementById('Tx').innerHTML= 
+		document.getElementById('Tx').innerHTML + 'ahoy ';">
+
+<input type="button" value="Pardon me" 
+	onclick="document.getElementById('Tx').innerHTML= 
+		document.getElementById('Tx').innerHTML + 'avast ';">
+
+<input type="button" value="Excuse me" 
+	onclick="document.getElementById('Tx').innerHTML= 
+		document.getElementById('Tx').innerHTML + 'arrr ';">
+
+</td>
+
+	<tr><td>People: </td>
+<td>
+<input type="button" value="Sir" 
+	onclick="document.getElementById('Tx').innerHTML = 
+		document.getElementById('Tx').innerHTML + 'matey ';">
+
+<input type="button" value="Madam" 
+	onclick="document.getElementById('Tx').innerHTML = 
+		document.getElementById('Tx').innerHTML + 'proudy beauty ';">
+
+<input type="button" value="Stranger" 
+	onclick="document.getElementById('Tx').innerHTML = 
+		document.getElementById('Tx').innerHTML + 'scurvy dog ';">
+
+<input type="button" value="Officer" 
+	onclick="document.getElementById('Tx').innerHTML = 
+		document.getElementById('Tx').innerHTML + 'flout blaggart ';">
+</td>
+
+	<tr><td>Articles: </td>
+<td>
+<input type="button" value="The" 
+	onclick="document.getElementById('Tx').innerHTML = 
+		document.getElementById('Tx').innerHTML + 'th` ';">
+
+<input type="button" value="Nearby" 
+	onclick="document.getElementById('Tx').innerHTML = 
+		document.getElementById('Tx').innerHTML + 'broadside ';">
+
+<input type="button" value="My" 
+	onclick="document.getElementById('Tx').innerHTML = 
+		document.getElementById('Tx').innerHTML + 'me ';">
+
+<input type="button" value="Your" 
+	onclick="document.getElementById('Tx').innerHTML = 
+		document.getElementById('Tx').innerHTML + 'yer ';">
+</td>
+
+	<tr><td>Places: </td>
+<td>
+<input type="button" value="Restroom" 
+	onclick="document.getElementById('Tx').innerHTML = 
+		document.getElementById('Tx').innerHTML + 'head ';">
+
+
+<input type="button" value="Restaurant" 
+	onclick="document.getElementById('Tx').innerHTML = 
+		document.getElementById('Tx').innerHTML + 'galley ';">
+
+
+<input type="button" value="Hotel" 
+	onclick="document.getElementById('Tx').innerHTML = 
+		document.getElementById('Tx').innerHTML + 'fleabag inn ';">
+
+
+<input type="button" value="Bank" 
+	onclick="document.getElementById('Tx').innerHTML = 
+		document.getElementById('Tx').innerHTML + 'buried treasure ';">
+</td>
+</table>
+
+
+
+
+<p>
+<input type="button" value="CLEAR"
+	onclick="document.getElementById('Tx').innerHTML='<p>';">
+<input type="button" value="New Line"
+	onclick="document.getElementById('Tx').innerHTML=
+	document.getElementById('Tx').innerHTML+'</p><p>';">
+
+</p>
+<hr>
+<div id="Tx"></div>
+</body>
+</html>

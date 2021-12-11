@@ -1,0 +1,91 @@
+<!Doctype html>
+<html>
+<head>
+<title> Slot Machine </title>
+
+<script type="text/javascript">
+function FI(y){
+	x=Math.ceil(8*Math.random());
+	PIC='slmach/slmach'+x+'.gif';
+	document.getElementById('I'+y).src=PIC;
+}
+
+function CWC(){
+	s1=document.getElementById('I1').src;
+	s2=document.getElementById('I2').src;
+	s3=document.getElementById('I3').src;
+ 	cr=parseFloat(document.getElementById('CR').innerHTML);
+	if(s1==s2){
+		if(s1==s3){
+			alert('Congrats, the middles are equal. You won 6 credits');
+			document.getElementById('CR').innerHTML=cr+5;
+		}else{
+		alert('Congrats, you got two equals, you won 2 credits');
+		document.getElementById('CR').innerHTML=cr+2;
+		}
+	}else if(s2==s3){
+		alert('Congrats, you got two equals, you won 2 credits');
+		document.getElementById('CR').innerHTML=cr+2;
+	}else if(s1==s3){
+		alert('Congrats, you got two equals, you won 2 credits');
+		document.getElementById('CR').innerHTML=cr+2;
+	}
+}
+</script>
+</head>
+
+<body style="background:black; color:white">
+
+<div style="text-align:center">
+<h1> SLOT MACHINE </h1>
+
+<h2>You have <span id="CR">0</span> credits left.</h2>
+
+<br>
+<img src="slmach/LEVA.jpg" height=102 width=31 
+	onclick="cr=parseFloat(document.getElementById('CR').innerHTML);
+		if(cr>1){
+			z=1;
+			while(z<=3){FI(z); z=z+1;};
+			cr=cr-2;
+			setTimeout('CWC()',500);
+			document.getElementById('CR').innerHTML=cr;
+		}else{
+			alert('Sorry, but you don\'t have enough credits left to play');
+		};
+		this.src='slmach/LEVA.jpg';">
+<br>
+How many more credits do you want (1$=5 credits): <input type="text" id="more">
+
+<input type="button" value="ADD THEM"
+	onclick="z=document.getElementById('EX').value;
+		if(z!=''){
+			document.getElementById('CR').innerHTML=
+			parseFloat(document.getElementById('CR').innerHTML)+
+			parseFloat(document.getElementById('more').value);
+		}else{
+			alert('I need your credit card information'+
+				' in order to give you credits. '+
+			'I don\'t actually need them, just put anything in the expiration date.');
+		};"><br>
+<br>
+
+Credit card information:<input type="text" placeholder="0000" size="1">-
+<input type="text" placeholder="0000" size="1">-
+<input type="text" placeholder="0000" size="1">-
+<input type="text" placeholder="0000" size="1"><br>
+
+Expiration Date:<input type="text" placeholder="MM/YYYY" size="5" id="EX"><br>
+
+CVV:<input type="text" placeholder="000" size="1"><br>
+
+<hr>
+
+<p>
+<img id="I1" height=256; width=256; style="border:solid; color:orange;"></img>
+<img id="I2" height=256; width=256; style="border:solid; color:orange;"></img>
+<img id="I3" height=256; width=256; style="border:solid; color:orange;"></img>
+</p>
+
+</body>
+</html>
