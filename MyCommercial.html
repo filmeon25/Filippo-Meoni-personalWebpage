@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head> <title> My commercial </title>
+<script type="text/javascript">
+function RB(){
+	A1=(A1+1)%4;
+	A2=(A2+1)%4;
+	document.getElementById('IM1').src='Immagini/BB'+A1+'.jpg';
+	document.getElementById('IM2').src='Immagini/BB'+A2+'.jpg';
+}
+</script>
+</head>
+<body style="background-image:url('Immagini/fire.gif'); background-repeat:no-repeat; background-attachment:fixed; 
+	background-size:cover;color:red" onload="A1=0; A2=2; setInterval('RB()',2500)">
+<table>
+	<tr><td>
+	<table><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td style="background-color:orange">
+	<h2><B><I>&nbsp; <a href="https://goo.gl/maps/gWgqAWHuWPtVsrNB9" target="_blank">OUR LOCATION HERE</a> &nbsp;</B></I></h2></td></table></td>
+	<td style="text-align:center"><a href="http://www.bigbubbasbadbbq.com/" target="_blank">
+	<img src="Immagini/Logo.jpg" height=500 width=400> </a> </td>
+	<td style="text-align:center"><b><i><u><h2><div style="color:white"> AND THIS IS OUR PHONE NUMBER: <br></B></I></u>
+	<span style:"color:white"><b> 805-238-6272 </h2></b></td></div>
+
+	<tr>
+	<td><h1><div style="text-align:right"><b>-------------></b></h1></div></td>
+	<td style="background-color:black"><div style="text-align:center"><h1><a href="http://www.bigbubbasbadbbq.com/our-menu" target="_blank"><b> OUR MENU HERE </b></h1></div></a></td>
+	<td><h1><b><-------------</b></h1></td>
+
+	<tr>
+	<td><img src="Immagini/BB0.jpg" id="IM1" width="350" height="275"></td>
+	<td><a href="http://www.bigbubbasbadbbq.com/" target="_blank"><img src="Immagini/ad2.gif"></a></td>
+	<td><img src="Immagini/BB2.jpg" id="IM2" width="350" height="275"></td>
+	
+</table>
+</body>
+</html>	
