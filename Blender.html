@@ -1,0 +1,69 @@
+<!Doctype html>
+<html>
+<head>
+<title> Blender </title>
+<script type="text/javascript">
+function RI(){
+	I1=(I1+1)%4;
+	document.getElementById('bl').src='Immagini/BD'+I1+'.jpg';
+}
+</script>
+
+</head>
+	
+
+<body style="background-color:black; color:white;"  onload="I1=0; setInterval('RI()',2500);">
+<h1 style="text-align:center"> Some of my personal 3D projects: </h1>
+
+<table style="text-align:center">
+<tr>
+	<td style="border:solid; color:orange; border-radius:40px;"><h1> Apple: </h1></td>
+	<td style="border:solid; color:red; border-radius:40px;"><h1> Indoraptor: </h1></td>
+	<td style="border:solid; color:blue; border-radius:40px;"><h1> Planet: </h1></td>
+<tr>
+	<td>
+	<h3>
+	I really liked making this one, I watched a tutorial<br>
+	on how to make it, it was a long process, but it is one<br>
+	of the ones that came out as the best ones.
+	</h3>
+	</td>
+	<td>
+	<h3>
+	This one was the hardest one to make out of the<br>
+	three, I got further than I thought I could go.<br>
+	It still needs a lot of work, but I feel like<br>
+	from when I strated it is pretty good!
+	</h3>
+	</td>
+	<td>
+	<h3>
+	This one is the worst one that I made,<br>
+	but it was the easiest to make.<br>
+	But the lights were really hard to place,<br>
+	because it is not easy to simulate the<br>
+	sun, plus I didn't want to just make <br>
+	a replica of the Earth, so I tried to come up<br>
+	with something slightly different.
+	</h3>
+	</td>
+<tr>
+	<td>
+	<img src="Immagini/Apple.jpg" width=500>
+	</td>
+	<td>
+	<img src="Immagini/Indoraptor.jpg" width=500>
+	</td>
+	<td>
+	<img src="Immagini/BD0.jpg" width=500 id="bl">
+	</td>
+</table>
+
+
+<hr>
+<p style="text-align:center">
+<input type="button" style="background-color:white; color:black;" value="Home page"
+	onclick="window.location.href='index.html';">
+</p>
+</body>
+</html>
